@@ -1,0 +1,8 @@
+sudo vi /etc/systemd/system/trinity-rebuild.timer
+sudo vi /etc/systemd/system/trinity-rebuild.service
+journalctl -u trinity-rebuild.service
+systemctl status trinity-rebuild.service
+systemctl enable trinity-rebuild.service
+systemctl stop   trinity-rebuild.service
+systemctl start  trinity-rebuild.service
+

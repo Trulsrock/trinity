@@ -1,0 +1,17 @@
+[Unit]
+Description=Rebuilds TrinityCore
+Wants=trinity-rebuild.timer
+
+[Service]
+Type=oneshot
+User=trinity
+Group=trinity
+WorkingDirectory=/trinity/scripts
+StandardOutput=append:/trinity/logs/trinity-rebuild.log
+StandardError=append:/trinity/logs/trinity-rebuild.err
+ExecStart=/trinity/scripts/trinity-clone.sh
+ExecStart=/trinity/scripts/trinity-rebuild.sh
+
+[Install]
+WantedBy=multi-user.target
+

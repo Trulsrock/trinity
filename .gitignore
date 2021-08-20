@@ -1,0 +1,51 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Trinity files
+worldserver.conf
+autserver.conf
+trinity_databases.sql
+Monday/*
+Tuesday/*
+Wednesday/*
+Thursday/*
+Friday/*
+Saturday/*
+logs/*
+Sunday/*
+client-maps/*
+client/*
+radare2/
+tmp/*
+backup/*
+Postman/*

@@ -1,0 +1,36 @@
+
+
+https://trinitycore.atlassian.net/wiki/spaces/tc/pages/19955721/Monitoring+a+TrinityCore+server
+
+sudo apt install grafana
+sudo systemctl start grafana-server
+sudo systemctl status grafana-server
+sudo vi /etc/grafana/grafana.ini
+wget https://dl.influxdata.com/telegraf/releases/telegraf_1.19.1-1_amd64.deb
+sudo dpkg -i telegraf_1.19.1-1_amd64.deb
+sudo systemctl enable --now telegraf
+sudo systemctl status telegraf
+#
+# DO NOT USE v2 INFLUX
+#
+# wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.7-amd64.deb
+# sudo dpkg -i influxdb2-2.0.7-amd64.deb
+# sudo systemctl status influxdb.service
+# sudo systemctl reload influxdb.service
+# sudo systemctl restart influxdb.service
+# sudo systemctl status influxdb.service
+apt list --installed | grep influx
+apt-cache show influx
+apt-cache show influxdb2
+wget https://dl.influxdata.com/influxdb/releases/influxdb_1.8.6_amd64.deb
+sudo systemctl status influxdb.service
+sudo systemctl start influxdb.service
+sudo systemctl stop influxdb.service
+sudo dpkg --purge remove influxdb
+sudo dpkg --purge remove influxdb2
+sudo apt --purge remove influxdb2
+sudo snap remove influxdb
+sudo apt install ./influxdb_1.8.6_amd64.deb
+sudo vi /etc/influxdb/influxdb.conf
+apt list --installed | grep influx
+
